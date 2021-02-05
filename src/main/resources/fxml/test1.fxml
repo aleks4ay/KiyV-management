@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextFlow layoutX="36.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" />
+      <HBox layoutX="335.740234375" layoutY="27.05078125" style="-fx-border-width: 1 1 1 1; -fx-border-color: red; -fx-border-style: solid; -fx-background-color: blue;">
+         <children>
+            <Text layoutX="336.0" layoutY="40.0" stroke="#c80000" strokeType="OUTSIDE" strokeWidth="0.0" text="Text&#10;ввеукеу кенкн &#10;енгген" wrappingWidth="174.13671875" />
+         </children>
+      </HBox>
+   </children>
+</Pane>

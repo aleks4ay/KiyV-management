@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane_one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SceneController">
+  <children>
+
+    <TabPane fx:id="tab_pane" layoutY="44.0" minHeight="300.0" minWidth="300.0" prefHeight="696.0" prefWidth="1430.0" rotateGraphic="true" tabMaxHeight="35.0" tabMaxWidth="200.0" tabMinHeight="35.0" tabMinWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+       <tabs>
+
+
+
+           <Tab fx:id="tab_manager" closable="false" style="-fx-pref-height: 30px; -fx-font-size: 16px;" text="Заказы">
+           <content>
+              <HBox layoutX="1031.0" maxHeight="-Infinity" prefHeight="815.0" prefWidth="1580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                  <children>
+                    <VBox id="table" fx:id="tab_1" prefHeight="692.0" prefWidth="1260.0">
+                        <children>
+                            <HBox id="row_head" fx:id="table_one_head" maxWidth="1260.0" prefHeight="65.0">
+                                <padding>  <Insets left="1.0" right="-1.0" /> </padding>
+                                <children>
+                                    <Label id="cell_head" fx:id="col_num" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="65.0" text="№&#10;заказа">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_data1" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="65.0" text="Дата&#10;заказа">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_client" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Клиент">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_data2" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="65.0" text="    В&#10;произв.">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_pos" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="35.0" text=" №&#10;поз">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_descr" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="260.0" text="Продукция">
+                                        <font>
+                                            <Font name="System Bold" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_amount" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="35.0" text="Кол.">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_type" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="70.0" text="Тип">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_status" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Статус">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_date3" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="80.0" text="Выпуск&#10;продукц.">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_date4" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="80.0" text="  Дата&#10;отгрузки&#10; (заказ)">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_date41" alignment="CENTER" layoutX="971.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefWidth="80.0" text="Фактич.&#10;отгрузка" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_designer" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Конструктор">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label id="cell_head" fx:id="col_manager" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="109.0" text="Менеджер">
+                                        <font>
+                                            <Font name="System Bold" size="14.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <ListView fx:id="listview_one" prefHeight="640.0" prefWidth="1100.0" styleClass="listview_one" />
+                        </children>
+                    </VBox>
+
+                    <VBox id="total_info" maxHeight="-Infinity" prefHeight="805.0" prefWidth="300.0">
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                        </HBox.margin>
+                        <children>
+                            <Label alignment="CENTER" prefHeight="36.0" prefWidth="300.0" style="-fx-border-width: 0 0 2 0; -fx-border-style: solid; -fx-border-color: blue;" text="Общая информация">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Label>
+
+                            <HBox maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="400.0" prefWidth="210.0">
+                                <children>
+
+                                    <VBox fx:id="info_list1" maxHeight="1.7976931348623157E308" prefHeight="300.0" prefWidth="145.0">
+                                        <children>
+                                            <MenuButton fx:id="menu1" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="48.0" text="Сортировка&#10;по:" textAlignment="CENTER">
+                                                <items>
+                                                    <MenuItem id="m1_1" mnemonicParsing="false" onAction="#menu_1" text="По номеру заказа" />
+                                                    <MenuItem id="m1_2" mnemonicParsing="false" onAction="#menu_1" text="По дате заказа" />
+                                                    <MenuItem id="m1_3" mnemonicParsing="false" onAction="#menu_1" text="По дате 'в производство'" />
+                                                    <MenuItem id="m1_4" mnemonicParsing="false" onAction="#menu_1" text="По дате отгрузки (из 1С)" />
+                                                    <MenuItem id="m1_5" mnemonicParsing="false" onAction="#menu_1" text="По дате отгрузки фактической" />
+                                                    <MenuItem id="m1_6" mnemonicParsing="false" onAction="#menu_1" text="По клиенту" />
+                                                    <MenuItem id="m1_7" mnemonicParsing="false" onAction="#menu_1" text="По менеджеру" />
+                                                    <MenuItem id="m1_8" mnemonicParsing="false" onAction="#menu_1" text="По конструктору" />
+                                                    <MenuItem id="m1_9" mnemonicParsing="false" onAction="#menu_1" text="По типу" />
+                                                </items>
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <VBox.margin>
+                                                    <Insets bottom="10.0" top="1.0" />
+                                                </VBox.margin>
+                                            </MenuButton>
+                                            <MenuButton fx:id="menu2" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="50.0" text="ТМС" textAlignment="CENTER">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <items>
+                                                    <MenuItem id="m2_1" mnemonicParsing="false" onAction="#menu_2" text="Все заказы" />
+                                                    <MenuItem id="m2_2" mnemonicParsing="false" onAction="#menu_2" text="Все заказы (кроме закрытых)" />
+                                                    <!--<MenuItem id="m2_2" mnemonicParsing="false" onAction="#menu_2" text="Заказы за месяц" />-->
+                                                    <MenuItem id="m2_3" mnemonicParsing="false" onAction="#menu_2" text="Заказы в процессе производства" />
+                                                    <MenuItem id="m2_4" mnemonicParsing="false" onAction="#menu_2" text="Заказы на СКЛАДЕ" />
+                                                    <MenuItem id="m2_5" mnemonicParsing="false" onAction="#menu_2" text="Оплаченные" />
+                                                    <MenuItem id="m2_6" mnemonicParsing="false" onAction="#menu_2" text="Закрытые" />
+                                                </items>
+                                                <VBox.margin>
+                                                    <Insets bottom="20.0" />
+                                                </VBox.margin>
+                                            </MenuButton>
+                                            <MenuButton fx:id="menu4" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Менеджеры:" textAlignment="RIGHT">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <items>
+                                                    <MenuItem id="m4_1" mnemonicParsing="false" onAction="#menu_4" text="Выбрать всех" />
+                                                    <MenuItem id="m4_2" mnemonicParsing="false" onAction="#menu_4" text="Вареня Н. Р." />
+                                                    <MenuItem id="m4_3" mnemonicParsing="false" onAction="#menu_4" text="Соломко Н. О." />
+                                                    <MenuItem id="m4_4" mnemonicParsing="false" onAction="#menu_4" text="Холохоренко Д. П." />
+                                                    <MenuItem id="m4_5" mnemonicParsing="false" onAction="#menu_4" text="Саламатова Е. С." />
+                                                </items>
+                                                <VBox.margin>
+                                                    <Insets bottom="10.0" />
+                                                </VBox.margin>
+                                            </MenuButton>
+                                            <MenuButton fx:id="menu6" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Временной&#10;период:&#10;" textAlignment="CENTER">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <items>
+                                                    <MenuItem id="m6_1" mnemonicParsing="false" onAction="#menu_6" text="За текущий год" />
+                                                    <MenuItem id="m6_2" mnemonicParsing="false" onAction="#menu_6" text="За текущий месяц" />
+                                                    <MenuItem id="m6_3" mnemonicParsing="false" onAction="#menu_6" text="За последние 30 дней" />
+                                                    <MenuItem id="m6_4" mnemonicParsing="false" onAction="#menu_6" text="За неделю" />
+                                                    <MenuItem id="m6_5" mnemonicParsing="false" onAction="#menu_6" text="За день" />
+                                                    <!--<MenuItem id="m6_6" mnemonicParsing="false" onAction="#menu_6" text="Выбрать дату по календарю" />-->
+                                                </items>
+                                                <VBox.margin>
+                                                    <Insets />
+                                                </VBox.margin>
+                                            </MenuButton>
+                                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="30.0" text="Выбрано дней:" textAlignment="RIGHT">
+                                                <VBox.margin>
+                                                    <Insets top="20.0" />
+                                                </VBox.margin>
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                            </Label>
+                                            <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="400.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" text="Показано заказов:" textAlignment="RIGHT">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                            </Label>
+                                            <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="460.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" text="Отгружено:" textAlignment="RIGHT" textFill="#8c8c8c">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                            </Label>
+                                        </children>
+                                        <HBox.margin>
+                                            <Insets top="10.0" />
+                                        </HBox.margin>
+                                        <padding>
+                                            <Insets left="5.0" right="5.0" />
+                                        </padding>
+                                    </VBox>
+
+
+                                </children>
+                            </HBox>
+                            <VBox prefHeight="140.0" prefWidth="160.0">
+                                <children>
+                                      <Label fx:id="info11" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="120.0" text="дата отгрузки " textFill="#990f0f" wrapText="true">
+                                          <font>
+                                              <Font size="15.0" />
+                                          </font>
+                                          <opaqueInsets>
+                                              <Insets />
+                                          </opaqueInsets>
+                                          <padding>
+                                              <Insets left="5.0" />
+                                          </padding>
+                                      </Label>
+                                    <DatePicker fx:id="day_start" editable="false" onAction="#changeDate" prefHeight="36.0" prefWidth="150.0" promptText="Начало периода" showWeekNumbers="true" style="-fx-font-size: 14;">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" />
+                                        </VBox.margin>
+                                    </DatePicker>
+                                    <DatePicker fx:id="day_end" editable="false" layoutX="15.0" layoutY="485.0" onAction="#changeDate" prefHeight="36.0" prefWidth="150.0" promptText="Конец периода" showWeekNumbers="true" style="-fx-font-size: 14;">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" />
+                                        </VBox.margin>
+                                    </DatePicker>
+
+                                </children>
+                                <opaqueInsets>
+                                    <Insets />
+                                </opaqueInsets>
+                                <padding>
+                                    <Insets left="5.0" />
+                                </padding>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                            </VBox>
+                            <Button fx:id="print_report" mnemonicParsing="false" onAction="#printReport" prefHeight="45.0" prefWidth="280.0" text="Сохранить Отчет по Технологичке">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets top="15.0" />
+                                </VBox.margin>
+                            </Button>
+                        </children>
+                    </VBox>
+                  </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+              </HBox>
+
+           </content>
+           </Tab>
+
+
+
+       </tabs>
+    </TabPane>
+
+
+    <Text disable="true" fill="#b21919" layoutX="675.0" layoutY="797.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kiy-V Management 1.3" textAlignment="CENTER" translateZ="10.0" underline="true" wrappingWidth="244" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="2.0">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+      <MenuBar layoutY="4.0" prefHeight="18.0" prefWidth="318.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Unspecified Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+
+  </children>
+</AnchorPane>
