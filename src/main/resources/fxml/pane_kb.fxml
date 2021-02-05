@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.web.*?>
 <?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pane_one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SceneController">
+<AnchorPane fx:id="pane_one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SceneController">
   <children>
 
-    <TabPane fx:id="tab_pane" minHeight="300.0" minWidth="300.0" prefHeight="760.0" prefWidth="1430.0" rotateGraphic="true" tabMaxHeight="35.0" tabMaxWidth="200.0" tabMinHeight="35.0" tabMinWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <TabPane fx:id="tab_pane" minHeight="300.0" minWidth="300.0" prefHeight="760.0" prefWidth="1280.0" rotateGraphic="true" tabMaxHeight="35.0" tabMaxWidth="200.0" tabMinHeight="35.0" tabMinWidth="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
        <tabs>
 
 
@@ -97,7 +118,7 @@
                                     </Label>
                                 </children>
                             </HBox>
-                            <ListView fx:id="listview_one" prefHeight="640.0" prefWidth="1100.0" styleClass="listview_one" />
+                            <ListView fx:id="listview_one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1100.0" styleClass="listview_one" />
                         </children>
                     </VBox>
 
@@ -534,11 +555,11 @@
 
            <Tab fx:id="tab_kb" closable="false" style="-fx-pref-height: 30px; -fx-font-size: 16px;" text="КБ">
                <content>
-                   <HBox layoutX="1031.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="965.0" prefWidth="1425.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                   <HBox layoutX="1031.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
                        <children>
-                           <VBox id="table" fx:id="tabl_kb" maxHeight="1.7976931348623157E308" prefHeight="842.0" prefWidth="1270.0">
+                           <VBox id="table" fx:id="tabl_kb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1180.0">
                                <children>
-                                   <HBox id="row_head" fx:id="table_kb_head" maxWidth="1250.0" prefHeight="55.0">
+                                   <HBox id="row_head" fx:id="table_kb_head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="1180.0">
                                        <padding>  <Insets left="1.0" right="-1.0" /> </padding>
                                        <children>
 
@@ -548,17 +569,14 @@
                                           <Insets />
                                        </HBox.margin>
                                            </Label>
-                                           <Label id="cell_head" fx:id="col_kb_client" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="120.0" text="Заказчик">
+                                           <Label id="cell_head" fx:id="col_kb_client" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Заказчик">
                                                <font> <Font size="12.0" /> </font>
                                            </Label>
                                            <Label id="cell_head" fx:id="col_kb_date_factory" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="60.0" text="В&#10;произ-&#10;водство" textAlignment="CENTER">
                                                <font> <Font size="12.0" /> </font>
                                            </Label>
-                                           <Label id="cell_head" fx:id="col_kb_manager" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Менеджер">
-                                               <font> <Font size="12.0" /> </font>
-                                           </Label>
-                                           <Label id="cell_head" fx:id="col_kb_designer" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="80.0" text="Конструктор">
-                                               <font> <Font size="12.0" /> </font>
+                                           <Label id="cell_head" fx:id="col_kb_manager" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="115.0" text="Менеджер/&#10;Конструктор">
+                                               <font> <Font size="14.0" /> </font>
                                            </Label>
                                            <Label id="cell_head" fx:id="col_kb_pos" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="30.0" text=" №&#10;поз">
                                                <font> <Font size="12.0" /> </font>
@@ -566,7 +584,7 @@
                                            <Label id="cell_head" fx:id="col_kb_descr" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="300.0" text="Продукция">
                                                <font> <Font name="System Bold" size="16.0" /> </font>
                                            </Label>
-                                           <Label id="cell_head" fx:id="col_kb_descr_size" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Размеры&#10;(длина/ширина/&#10;высота)" textAlignment="CENTER">
+                                           <Label id="cell_head" fx:id="col_kb_descr_size" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="100.0" text="Размеры:&#10;(длина/&#10;ширина/&#10;высота)" textAlignment="CENTER">
                                                <font> <Font size="12.0" /> </font>
                                            </Label>
                                            <Label id="cell_head" fx:id="col_kb_amount" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="30.0" text="Кол.">
@@ -594,9 +612,9 @@
                                        </children>
                                    </HBox>
 
-                                   <ListView fx:id="listview_kb" maxHeight="1.7976931348623157E308" prefHeight="610.0" prefWidth="1100.0" styleClass="listview_one">
+                                   <ListView fx:id="listview_kb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="1180.0" styleClass="listview_one">
                                          <VBox.margin>
-                                            <Insets right="10.0" />
+                                            <Insets right="5.0" />
                                          </VBox.margin>
 
                                          <contextMenu>
@@ -627,42 +645,31 @@
 
                                </children>
                            </VBox>
-                        <Pane maxHeight="-Infinity" prefHeight="643.0" prefWidth="150.0" translateY="60.0">
+                        <Pane maxHeight="-Infinity" prefHeight="560.0" prefWidth="110.0" translateY="30.0">
                            <children>
-                               <Label layoutX="15.0" layoutY="5.0" prefHeight="40.0" prefWidth="120.0" text="Сортировка:" textAlignment="CENTER" underline="true">
-                                   <font> <Font name="System Bold Italic" size="16.0" /> </font>
+                               <Label layoutX="-1.0" layoutY="-1.0" prefHeight="35.0" prefWidth="110.0" text="Сортировка:" textAlignment="CENTER" underline="true">
+                                   <font> <Font name="System Bold Italic" size="15.0" /> </font>
                                </Label>
-                               <RadioButton fx:id="radio_kb_1" layoutY="50.0" mnemonicParsing="false" onAction="#sortingKb" prefHeight="30.0" prefWidth="145.0" selected="true" text="по № заказа">
+                               <RadioButton fx:id="radio_kb_1" layoutY="31.0" mnemonicParsing="false" onAction="#sortingKb" prefHeight="55.0" prefWidth="75.0" selected="true" text="по № заказа" wrapText="true">
                                   <font> <Font size="14.0" /> </font>
                                   <toggleGroup>
                                      <ToggleGroup fx:id="group_kb" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton fx:id="radio_kb_2" layoutY="85.0" mnemonicParsing="false" onAction="#sortingKb" prefHeight="50.0" prefWidth="145.0" text="по дате поступления в КБ" toggleGroup="$group_kb" wrapText="true">
+                              <RadioButton fx:id="radio_kb_2" layoutY="87.0" mnemonicParsing="false" onAction="#sortingKb" prefHeight="70.0" prefWidth="75.0" text="по дате пост. в КБ" toggleGroup="$group_kb" wrapText="true">
                                  <font> <Font size="14.0" /> </font>
                               </RadioButton>
-                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="170.0" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Заказов  в КБ:" textAlignment="RIGHT">
+                              <Label alignment="CENTER_RIGHT" layoutY="160.0" maxWidth="-Infinity" prefHeight="50.0" prefWidth="70.0" text="Заказов  в КБ:" textFill="BLUE" wrapText="true">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="100.0" text="из них в разработке:" textAlignment="RIGHT" wrapText="true">
+                              <Label alignment="CENTER_RIGHT" layoutX="-3.0" layoutY="220.0" maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="80.0" text="из них в разраб.:" textFill="#c51aaf" wrapText="true">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="info_kb_1" layoutX="110.0" layoutY="170.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="BLUE">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <padding>
-                                    <Insets left="5.0" right="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label fx:id="info_kb_3" layoutX="110.0" layoutY="280.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="BLUE">
+                              <Label fx:id="info_kb_1" alignment="CENTER" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="BLUE">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -673,7 +680,7 @@
                                     <Insets left="5.0" right="5.0" />
                                  </padding>
                               </Label>
-                              <Label fx:id="info_kb_2" layoutX="110.0" layoutY="210.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="BLUE">
+                              <Label fx:id="info_kb_3" alignment="CENTER" layoutX="14.0" layoutY="330.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="BLUE">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -684,23 +691,34 @@
                                     <Insets left="5.0" right="5.0" />
                                  </padding>
                               </Label>
-                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="270.0" maxWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" text="Изделий в заказах:" textAlignment="RIGHT" wrapText="true">
+                              <Label fx:id="info_kb_2" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="265.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="35.0" text="0" textFill="#c51aaf">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="290.0" maxWidth="-Infinity" prefHeight="55.0" prefWidth="70.0" text="Изделий в заказах:" textAlignment="RIGHT" textFill="BLUE" wrapText="true">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
       
-                                               <Button fx:id="kb_change" layoutX="15.0" layoutY="482.0" mnemonicParsing="false" onAction="#selectTheSameKB" prefHeight="58.0" prefWidth="125.0" text="Выделить&#10;подобные" textAlignment="CENTER">
+                                               <Button fx:id="kb_change" layoutY="420.0" mnemonicParsing="false" onAction="#selectTheSameKB" prefHeight="58.0" prefWidth="100.0" text="Выделить&#10;подобные" textAlignment="CENTER">
                                        <font>
                                            <Font size="16.0" />
                                        </font>
                                    </Button>
-                              <Button fx:id="kb_save" layoutX="17.0" layoutY="604.0" mnemonicParsing="false" onAction="#applyWorkingKB" prefHeight="30.0" prefWidth="125.0" text="Применить" textAlignment="CENTER">
+                              <Button fx:id="kb_save" layoutY="510.0" mnemonicParsing="false" onAction="#applyWorkingKB" prefHeight="37.0" prefWidth="100.0" text="Применить" textAlignment="CENTER">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="15.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="kb_change1" layoutX="15.0" layoutY="432.0" mnemonicParsing="false" onAction="#clearKB" prefHeight="29.0" prefWidth="125.0" text="О т м е н а" textAlignment="CENTER">
+                              <Button fx:id="kb_change1" layoutY="380.0" mnemonicParsing="false" onAction="#clearKB" prefHeight="37.0" prefWidth="87.0" text="Отмена" textAlignment="CENTER">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -710,7 +728,7 @@
 
                        </children>
                      <padding>
-                        <Insets left="5.0" />
+                        <Insets left="2.0" />
                      </padding>
                    </HBox>
 
@@ -1245,17 +1263,17 @@
     </TabPane>
 
 
-    <Text disable="true" fill="#b21919" layoutX="675.0" layoutY="797.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kiy-V Management 1.3" textAlignment="CENTER" translateZ="10.0" underline="true" wrappingWidth="244" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="2.0">
+    <Text disable="true" fill="#b21919" layoutX="675.0" layoutY="797.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kiy-V Management 1.3" textAlignment="CENTER" translateZ="10.0" underline="true" wrappingWidth="244" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="5.0">
             <font>
                 <Font size="22.0" />
             </font>
         </Text>
-    <Text disable="true" fill="#5bb980" layoutX="903.0" layoutY="25.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="последнее обновление:" textAlignment="CENTER" underline="true" wrappingWidth="220.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="6.0">
+    <Text disable="true" fill="#5bb980" layoutX="803.0" layoutY="25.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="последнее обновление:" textAlignment="CENTER" underline="true" wrappingWidth="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="5.0">
          <font>
-            <Font size="18.0" />
+            <Font size="16.0" />
          </font>
       </Text>
-    <Text fx:id="timeUpdate" disable="true" fill="#5bb980" layoutX="1607.0" layoutY="25.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00.2000  00:00" wrappingWidth="190.0" AnchorPane.rightAnchor="10.0">
+    <Text fx:id="timeUpdate" disable="true" fill="#5bb980" layoutX="1607.0" layoutY="8.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00.2000  00:00" wrappingWidth="200.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
          <font>
             <Font size="16.0" />
          </font>

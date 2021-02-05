@@ -33,7 +33,7 @@ public class DescriptionFactory {
         this.position = position;
         this.amount = amount;
         this.descr = descrFirst + " " + descrSecond;
-        this.descrSize = sizeA + "×" + sizeB + "×" + sizeC;
+        this.descrSize = sizeA + " × " + sizeB + " × " + sizeC;
         this.designer = designer;
         this.statusIndex = statusIndex;
         this.statusTime = statusTime;

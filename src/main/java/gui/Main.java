@@ -12,8 +12,8 @@ import name.UserName;
 public class Main extends Application {
 
     public static void main(String[] args) {
-        DataControl.setCurrentProfile("manager");
-//        DataControl.setCurrentProfile("designer");
+//        DataControl.setCurrentProfile("manager");
+        DataControl.setCurrentProfile("designer");
 //        DataControl.setCurrentProfile("factory");
 //        DataControl.setCurrentProfile("director");
 //        DataControl.setCurrentProfile("shipment");
@@ -38,7 +38,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setTitle("KIY-V Production Management 1.0 " + DataControl.getCurrentProfile());
         primaryStage.setScene(scene);
-        primaryStage.setMinHeight(760.0);
+        primaryStage.setMinHeight(700.0);
 //        primaryStage.setMaxHeight(900.0);
         primaryStage.setMinWidth(1200);
 

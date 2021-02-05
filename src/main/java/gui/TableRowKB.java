@@ -52,14 +52,14 @@ public class TableRowKB {
         Label col2_num = createLabel(order.getStringNumber(), 65.0, 16);
         HBox col2_client = createClientBox(order.getClient());
         Label col2_dateToFactory = createLabel(t3, 60.0, 12);
-        Label col2_manager = createLabel(order.getManager(), 100.0, 12);
-        Label col2_designer = createLabel(order.getDesigner(), 80.0, 12);
+        Label col2_manager = createLabel(order.getManager() + "\n" + order.getDesigner(), 115.0, 14);
+//        Label col2_designer = createLabel(order.getDesigner(), 80.0, 12);
 
         VBox vBox = getAllDescription(order.getDescriptions());
 
         Label col2_date13 = createLabel(t13, 60.0, 12);
 
-        hBox.getChildren().addAll(col2_num, col2_client, col2_dateToFactory, col2_manager, col2_designer, vBox, col2_date13);
+        hBox.getChildren().addAll(col2_num, col2_client, col2_dateToFactory, col2_manager, /*col2_designer,*/ vBox, col2_date13);
         int amountDay = DateConverter.getPeriodForDesigner(endTimeInMillis);
         if (amountDay < -3) {
             hBox.setStyle("-fx-background-color: rgba(155, 0, 0, 0.8);");
@@ -118,10 +118,14 @@ public class TableRowKB {
 
             Text col2_descr = new Text(descriptionFactory.getDescr());
             col2_descr.setWrappingWidth(290);
+            col2_descr.setId("first_descr_cell");
             col2_descr.setTranslateX(5);
-            col2_descr.setFont(new Font(12));
+            col2_descr.setFont(new Font(16));
 
-            Label col2_descrSize = createLabelForHBox(descriptionFactory.getDescrSize(), "last_descr_cell", 100.0, 12);
+            Label col2_descrSize = createLabelForHBox(descriptionFactory.getDescrSize(), "last_descr_cell", 100.0, 16);
+            col2_descrSize.setWrapText(true);
+            col2_descrSize.setTranslateX(5);
+
             Label col2_amount = createLabelForHBox(String.valueOf(descriptionFactory.getAmount()), "last_descr_cell", 30.0, 12);
             Label col2_date1 = createLabelForHBox(textForLabelDate1, "last_descr_cell", 60.0, 12);
 
@@ -192,17 +196,17 @@ public class TableRowKB {
 
     public HBox createClientBox (String clientName) {
         HBox hBox = new HBox(0);
-
+        int wight = 100;
         hBox.setSpacing(0);
         hBox.setPadding(new Insets(0, 0, 0, 0));
-        hBox.setPrefWidth(120);
+        hBox.setPrefWidth(wight);
         hBox.setId("cell_body");
         hBox.getChildren().clear();
 
         Text col2_client = new Text(clientName);
-        col2_client.setWrappingWidth(114);
+        col2_client.setWrappingWidth(wight-3);
         col2_client.setTranslateX(3);
-        col2_client.setFont(new Font(12));
+        col2_client.setFont(new Font(14));
         hBox.getChildren().add(col2_client);
         return hBox;
     }

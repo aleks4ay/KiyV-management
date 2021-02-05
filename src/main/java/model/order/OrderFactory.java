@@ -121,7 +121,10 @@ public class OrderFactory implements Comparable<OrderFactory> {
     }
 
     public String getDesigner() {
-        return designer;
+        if (designer != null) {
+            return designer;
+        }
+        return "";
     }
 
     public void setDesigner(String designer) {
