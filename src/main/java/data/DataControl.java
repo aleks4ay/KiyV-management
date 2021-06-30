@@ -10,8 +10,8 @@ public final class DataControl {
 
 //    private static String[] profile = {"manager", "designer", "ceh", "director", "developer"};
     private static String currentProfile = "";
-//    private static final String URL = "jdbc:postgresql://localhost:5432/db_101_test?useSSL=false";
-    private static final String URL = "jdbc:postgresql://192.168.0.11:5432/kiyv3?useSSL=false";
+    private static final String URL = "jdbc:postgresql://localhost:5432/kiyv3?useSSL=false";
+//    private static final String URL = "jdbc:postgresql://192.168.0.11:5432/kiyv3?useSSL=false";
     private static final String USER = "postgres";
     private static final String PASSWORD = "root8254";
 

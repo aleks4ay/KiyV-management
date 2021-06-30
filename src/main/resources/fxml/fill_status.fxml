@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane_fill" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" prefHeight="870.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fill_status.StatusSceneController">
+  <children>
+
+    <VBox id="table" fx:id="tab_21" prefHeight="860.0" prefWidth="997.0">
+        <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="977.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Text disable="true" fill="#b21919" layoutX="4.0" layoutY="24.0" lineSpacing="1.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Год заказа" wrappingWidth="125.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="search_year" layoutX="3.0" layoutY="30.0" prefHeight="37.0" prefWidth="90.0" promptText="0000">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="fill_search1" contentDisplay="TOP" layoutX="441.0" layoutY="2.0" mnemonicParsing="false" onAction="#showFoundedStatusById" prefHeight="40.0" prefWidth="150.0" text="Найти по Id" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="search_tablo_num" layoutX="129.0" layoutY="30.0" onKeyPressed="#searchByNumByEnter" prefHeight="37.0" prefWidth="124.0" promptText="0000">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text disable="true" fill="#b21919" layoutX="131.0" layoutY="24.0" lineSpacing="1.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="№ заказа" wrappingWidth="125.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="search_num" layoutX="122.0" layoutY="73.0" prefHeight="40.0" prefWidth="280.0" text="Заказ №  ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search_tablo_pos" layoutX="357.0" layoutY="30.0" onAction="#showFoundedStatusById" prefHeight="37.0" prefWidth="59.0" promptText="0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text disable="true" fill="#b21919" layoutX="359.0" layoutY="24.0" lineSpacing="1.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="№ поз" wrappingWidth="125.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="113.0" prefHeight="30.0" prefWidth="200.0" text="дата создания: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="search_d1" layoutX="209.0" layoutY="113.0" prefHeight="30.0" prefWidth="240.0" text="">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="141.0" prefHeight="30.0" prefWidth="200.0" text="дата 'в производство' : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="search_d2" layoutX="209.0" layoutY="141.0" prefHeight="30.0" prefWidth="240.0" text="">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="search_client" alignment="TOP_LEFT" layoutX="735.0" layoutY="91.0" prefHeight="86.0" prefWidth="240.0" text="" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="608.0" layoutY="87.0" prefHeight="30.0" prefWidth="110.0" text="Заказчик:" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="608.0" layoutY="6.0" prefHeight="30.0" prefWidth="110.0" text="Менеджер:" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="search_manager" layoutX="735.0" layoutY="6.0" prefHeight="30.0" prefWidth="191.0" text="">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="608.0" layoutY="44.0" prefHeight="30.0" prefWidth="110.0" text="Конструктор:" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="search_designer" layoutX="735.0" layoutY="44.0" prefHeight="30.0" prefWidth="191.0" text="">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search_tablo_id" layoutX="266.0" layoutY="30.0" onKeyPressed="#searchByIdByEnter" prefHeight="37.0" prefWidth="77.0" promptText="id">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text disable="true" fill="#b21919" layoutX="271.0" layoutY="23.0" lineSpacing="1.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" wrappingWidth="70.99998600780964">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="fill_search2" contentDisplay="TOP" layoutX="441.0" layoutY="47.0" mnemonicParsing="false" onAction="#showFoundedStatusByNum" prefHeight="40.0" prefWidth="150.0" text="Найти  по №" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Pane>
+
+
+            <HBox id="row_head" fx:id="table_two_head1" maxWidth="-Infinity" prefHeight="690.0" prefWidth="997.0">
+                 <children>
+                     <VBox prefWidth="209.0">
+                         <children>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Продукция">
+                                   <font>
+                                      <Font name="System Bold" size="14.0" />
+                                   </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Тип">
+                                   <font>
+                                      <Font name="System Bold" size="14.0" />
+                                   </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Статус">
+                                   <font>
+                                      <Font name="System Bold" size="14.0" />
+                                   </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Создан">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                               <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Поступил в производство">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                               <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Поступил в КБ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Начало разработки">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                               <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Задан вопрос менеджеру">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                               <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Получен ответ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Запуск в цехе">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Выпуск продукции">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Отгрузка">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="cell_head" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="45.0" text="Выполнен" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                         </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                      </VBox>
+
+                     
+                     <VBox prefHeight="635.0" prefWidth="218.0">
+                         <children>
+                             <TextField fx:id="fill_descr_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_type_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_status_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_0_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_1_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_2_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_3_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_4_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_5_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_7_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_21_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_22_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                             <TextField fx:id="fill_date_24_new" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="41.0" promptText="0000">
+                                 <font> <Font size="14.0" /> </font>
+                                 <VBox.margin> <Insets bottom="2.0" top="2.0" /> </VBox.margin>
+                             </TextField>
+                        <Button fx:id="fill_change" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeStatus" prefHeight="40.0" prefWidth="203.0" text="О б н о в и т ь" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+
+                         </children>
+                         <opaqueInsets>
+                             <Insets />
+                         </opaqueInsets>
+                         <HBox.margin>
+                             <Insets />
+                         </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     </VBox>
+                 </children>
+                 <padding>
+                    <Insets left="10.0" top="20.0" />
+                 </padding>
+            </HBox>
+       </children>
+       <HBox.margin>
+          <Insets left="10.0" />
+       </HBox.margin>
+    </VBox>
+ </children>
+
+</AnchorPane>

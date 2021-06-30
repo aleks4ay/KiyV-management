@@ -13,8 +13,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 //        DataControl.setCurrentProfile("manager");
-        DataControl.setCurrentProfile("designer");
-//        DataControl.setCurrentProfile("factory");
+//        DataControl.setCurrentProfile("designer");
+        DataControl.setCurrentProfile("factory");
 //        DataControl.setCurrentProfile("director");
 //        DataControl.setCurrentProfile("shipment");
 //        DataControl.setCurrentProfile("developer");
@@ -28,13 +28,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root;
-        root = FXMLLoader.load(getClass().getResource("/fxml/pane_kb.fxml"));
-/*        if (DataControl.getCurrentProfile().equals("designer")) {
+//        root = FXMLLoader.load(getClass().getResource("/fxml/pane_kb.fxml"));
+        if (DataControl.getCurrentProfile().equals("designer")) {
             root = FXMLLoader.load(getClass().getResource("/fxml/pane_kb.fxml"));
         }
         else {
             root = FXMLLoader.load(getClass().getResource("/fxml/pane.fxml"));
-        }*/
+        }
         Scene scene = new Scene(root);
         primaryStage.setTitle("KIY-V Production Management 1.0 " + DataControl.getCurrentProfile());
         primaryStage.setScene(scene);
