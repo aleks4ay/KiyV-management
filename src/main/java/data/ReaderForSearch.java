@@ -10,10 +10,9 @@ import java.sql.*;
 import java.util.*;
 
 public final class ReaderForSearch {
-    private static String url = DataControl.getURL();
+    private static String url = DataControl.getUrl();
     private static String user = DataControl.getUser();
-    private static String password = DataControl.getPASSWORD();
-
+    private static String password = DataControl.getPassword();
 
     public static Order readDB(String sql) {
         Order tempOrder = null;

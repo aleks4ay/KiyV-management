@@ -7,7 +7,6 @@ public class DescriptionFactory {
 
     private CheckBox[] checkBoxesStatus = new CheckBox[25];
     private long[] statusTimeList = new long[25];
-//    private Status status = null;
 
     private String kod;
     private int bigNumber = 0;
@@ -18,10 +17,8 @@ public class DescriptionFactory {
     private String designer = null;
     private int statusIndex = 0;
     private long statusTime = 0L;
-//    private String statusName;
     private String type = "";
 
-//    private String embodiment = "";
 
     public DescriptionFactory(String kod, int bigNumber, int position, int amount, String descrFirst, String descrSecond,
                               String designer, int statusIndex, long statusTime, int typeIndex, int sizeA, int sizeB, int sizeC) {
@@ -37,22 +34,9 @@ public class DescriptionFactory {
         this.designer = designer;
         this.statusIndex = statusIndex;
         this.statusTime = statusTime;
-//        this.statusName = StatusName.LONG_NAME[statusIndex];
         this.type = TypeName.NAME[typeIndex];
 
-//        this.status = new Status(statusIndex, statusTime);
         this.statusTimeList[statusIndex] = statusTime;
-        /*if (needCheckBox){
-            checkBoxesStatus = new CheckBox[25];
-            for (int i = 0; i < 25; i ++){
-//                checkBoxesStatus[i] = new CheckBox();
-*//*                if ( statusTimeList[i] != 0 ){
-                    checkBoxesStatus[i].setSelected(true);
-                    checkBoxesStatus[i].setText(DateConverter.dateToString(statusTimeList[i]) + "\n" + DateConverter.timeToString(statusTimeList[i]));
-                    checkBoxesStatus[i].setDisable(true);
-                }*//*
-            }
-        }*/
     }
 
     public String getKod() {
@@ -109,7 +93,7 @@ public class DescriptionFactory {
 
     public void setDesigner(String designer) {
 
-        if (designer.equalsIgnoreCase("SERVER-KIY-V")) {
+        if (designer.equalsIgnoreCase("SERVER-KIY-V") || designer.equalsIgnoreCase("192.168.0.11")) {
             this.designer = "SERVER-KIY-V";
         }
         if (designer.equalsIgnoreCase("aser") || designer.equalsIgnoreCase("Sergienko")) {

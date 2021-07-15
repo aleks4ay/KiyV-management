@@ -10,9 +10,9 @@ import java.sql.*;
 import java.util.*;
 
 public final class ReaderForParsing {
-    private static String url = DataControl.getURL();
+    private static String url = DataControl.getUrl();
     private static String user = DataControl.getUser();
-    private static String password = DataControl.getPASSWORD();
+    private static String password = DataControl.getPassword();
 
     public static List<OrderParsing> readOrderForParsing() {
         List<OrderParsing> tempListOrders = new ArrayList<>();

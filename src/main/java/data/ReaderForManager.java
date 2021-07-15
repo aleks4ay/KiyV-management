@@ -13,10 +13,9 @@ import java.time.LocalDate;
 import java.util.*;
 
 public final class ReaderForManager {
-    private static String url = DataControl.getURL();
+    private static String url = DataControl.getUrl();
     private static String user = DataControl.getUser();
-    private static String password = DataControl.getPASSWORD();
-
+    private static String password = DataControl.getPassword();
 
     public static List<Order> readOrderForManager(long timeStart, long timeEnd,
                   String managerFilter, String designerFilter, String sortWay, String sqlType, String observeOrder, String dateFactor) {

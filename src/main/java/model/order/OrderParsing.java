@@ -17,7 +17,6 @@ public class OrderParsing {
     private String manager = "";
     private int allPosition;
     private String descriptionFirstPosition;
-//    private long timeToFactory;// = 0L;
     private long timeToParsing;// = 0L;
     private int minStatusIndex = 25;
 
@@ -30,7 +29,6 @@ public class OrderParsing {
         this.manager = manager;
         this.allPosition = 0;
         this.descriptionFirstPosition = descriptionFirstPosition;
-//        this.timeToFactory = dateToFactory.getTime();
         this.timeToParsing = timeToParsing;
     }
 
@@ -114,10 +112,6 @@ public class OrderParsing {
             return date + "   " + time;
         }
     }
-
-//    public void setTimeToFactory(long timeToFactory) {
-//        this.timeToFactory = timeToFactory;
-//    }
 
     public List<DescriptionParsing> getDescriptions() {
         return descriptions;

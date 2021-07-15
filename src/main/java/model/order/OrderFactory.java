@@ -1,7 +1,6 @@
 package model.order;
 
 import model.description.DescriptionFactory;
-import model.description.DescriptionOrder;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -16,7 +15,6 @@ public class OrderFactory implements Comparable<OrderFactory> {
     private String client = "";
     private String manager = "";
     private String designer = null;
-//    private Timestamp dateCreate;// = 0L;
     private Timestamp dateToFactory;// = 0L;
     private Timestamp dateToShipment;// = 0L;
     private int minStatusIndex = 25;
@@ -31,7 +29,6 @@ public class OrderFactory implements Comparable<OrderFactory> {
         this.docNumber = docNumber;
         this.client = client;
         this.manager = manager;
-//        this.dateCreate = dateCreate;
         this.dateToFactory = dateToFactory;
         if (dateToShipment != null) {
             this.dateToShipment = dateToShipment;

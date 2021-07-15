@@ -30,13 +30,6 @@ public final class DateConverter {
         return calendarAfterPeriod.getTimeInMillis();
     }
 
-/*    public static String dateFromLongToString(long millis) {
-        calendar.setTimeInMillis(millis);
-        String date = calendar.get(Calendar.DATE);
-        calendar.get(Calendar.HOUR);
-        calendar.get(Calendar.MINUTE);
-    }*/
-
     public static String dateToString(long millis) {
         if ( (Long)millis == null | millis == 0 ) {
             return "-";

@@ -31,11 +31,6 @@ public class Status {
         this.statusName = StatusName.LONG_NAME[statusIndex];
         this.statusTime = time;
     }
-/*
-    public void setStatusIfChange (int statusIndex) {
-        this.statusIndex = statusIndex;
-        this.statusName = StatusName.LONG_NAME[statusIndex];
-    }*/
 
     public long getStatusTime() {
         return statusTime;

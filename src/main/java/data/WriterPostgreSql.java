@@ -1,14 +1,13 @@
 package data;
 
-import data.DataControl;
 import time.DateConverter;
 
 import java.sql.*;
 
 public final class WriterPostgreSql {
-    private static String url = DataControl.getURL();
+    private static String url = DataControl.getUrl();
     private static String user = DataControl.getUser();
-    private static String password = DataControl.getPASSWORD();
+    private static String password = DataControl.getPassword();
 
     public static boolean writeStatus(String kod, int statusIndex, long statusTime) {
         try (Connection conn = DriverManager.getConnection(url, user, password)) {

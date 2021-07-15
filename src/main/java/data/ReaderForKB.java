@@ -8,10 +8,9 @@ import java.sql.*;
 import java.util.*;
 
 public final class ReaderForKB {
-    private static String url = DataControl.getURL();
+    private static String url = DataControl.getUrl();
     private static String user = DataControl.getUser();
-    private static String password = DataControl.getPASSWORD();
-
+    private static String password = DataControl.getPassword();
 
     public static List<OrderFactory> readDB(String sql2, String sortWayKb, Label info_kb_2, Label info_kb_3) {
         List<DescriptionFactory> tempListDescription = new ArrayList<>();

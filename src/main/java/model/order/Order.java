@@ -11,9 +11,6 @@ public class Order implements Comparable<Order> {
 
     private String idDoc;
     private int bigNumber;
-//    private String idDoc = "";
-//    private String idClient = "";
-//    private String idManager = "";
     private int durationTime;
     private String docNumber = "";
     private String docNumberManufacture = "";
@@ -26,9 +23,6 @@ public class Order implements Comparable<Order> {
     private Timestamp dateToShipment;// = 0L;
     private int minStatusIndex = 25;
 
-
-//    private int unloaded = 0;
-//    private int isClosed = 0;
     private int allPosition = 0;
 
 
@@ -37,9 +31,6 @@ public class Order implements Comparable<Order> {
 
         this.idDoc = idDoc;
         this.bigNumber = bigNumber;
-//        this.idDoc = idDoc;
-//        this.idClient = idClient;
-//        this.idManager = idManager;
         this.durationTime = durationTime;
         this.docNumber = docNumber;
         this.docNumberManufacture = docNumberManufacture;
@@ -49,12 +40,8 @@ public class Order implements Comparable<Order> {
         if (dateToShipment != null) {
             this.dateToShipment = dateToShipment;
         }
-//        this.unloaded = unloaded;
-//        this.isClosed = isClosed;
-//        this.allPosition = ;
         this.client = client;
         this.manager = manager;
-//        this.designer = designer;
     }
 
     public String getStringNumber() {

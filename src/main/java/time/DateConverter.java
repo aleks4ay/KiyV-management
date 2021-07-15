@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public final class DateConverter {
@@ -47,8 +46,7 @@ public final class DateConverter {
         return calendarAfterPeriod.getTimeInMillis();
     }
 
-    public static long dateAfterThreeDay(OrderFactory order/*, List<Long> timeList*/) {
-//        DescriptionFactory descriptionFactory = null;
+    public static long dateAfterThreeDay(OrderFactory order) {
         long startTimeInMillis = 0L;
         long endTimeInMillis = 0L;
         for (DescriptionFactory descr : order.getDescriptions()) {
@@ -64,35 +62,12 @@ public final class DateConverter {
             dayForDevelopment = 5;
         }
         endTimeInMillis = DateConverter.offset(startTimeInMillis, dayForDevelopment);
-//        timeList.add(startTimeInMillis);
-//        timeList.add(endTimeInMillis);
         return endTimeInMillis;
     }
-
-    /*public static String dateAfterThreeDay(OrderFactory order) {
-        DescriptionFactory descriptionFactory = null;
-        long startTimeInMillis = 0L;
-        long endTimeInMillis = 0L;
-        for (DescriptionFactory descr : order.getDescriptions()) {
-            if (descr.getType().equalsIgnoreCase("КБ")) {
-                startTimeInMillis = descr.getStatusTimeList()[2];
-                break;
-            }
-        }
-        LocalDateTime dateStart = new Timestamp(startTimeInMillis).toLocalDateTime();
-        int dayForDevelopment = 3;
-        int startDayOfWeek = dateStart.getDayOfWeek().getValue();
-        if (startDayOfWeek > 2) {
-            dayForDevelopment = 5;
-        }
-        endTimeInMillis = DateConverter.offset(startTimeInMillis, dayForDevelopment);
-        return DateConverter.dateWithYearToString(endTimeInMillis) + "\n" + DateConverter.timeToString(endTimeInMillis);
-    }*/
 
     public static int getPeriod (LocalDate dateStart, LocalDate dateEnd) {
         int day1 = dateStart.getDayOfYear();
         int day2 = dateEnd.getDayOfYear();
-//        if  ((dateStart.getYear() == dateEnd.getYear()) & (day2 == day1))
         if  (dateStart.equals(dateEnd))
             return 1;
         else if (dateStart.getYear() == dateEnd.getYear())
@@ -114,7 +89,6 @@ public final class DateConverter {
 
 
     public static String dateToString(long millis) {
-//        System.out.println(millis);
         if ( (Long)millis == null | millis == 0 ) {
             return "-";
         }
@@ -189,7 +163,6 @@ public final class DateConverter {
     }
 
     public static long dateFromStringToLong (String dateString) {
-//        System.out.println(dateString);
         CharSequence c1 = ".";
         CharSequence c2 = "/";
         String[] lines = null;
@@ -213,7 +186,6 @@ public final class DateConverter {
 
         try {
             Date d = format.parse(s);
-//            System.out.println(d);
             return d;
         } catch (ParseException e) {
             e.printStackTrace();
@@ -224,7 +196,7 @@ public final class DateConverter {
     public static String dateToString(Date d) {
         DateFormat format = new SimpleDateFormat("dd.MM.yy", Locale.ENGLISH);
         String s = format.format(d);
-        return s;//.substring(0,6) + s.substring(8);
+        return s;
     }
 
     public static LocalDate dateToLocalDate(java.util.Date d) {

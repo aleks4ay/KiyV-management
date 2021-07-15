@@ -3,40 +3,39 @@ package data;
 import time.DateConverter;
 
 import java.io.*;
+import java.util.Properties;
 
 public final class DataControl {
 
     public static int i = 0;
 
-//    private static String[] profile = {"manager", "designer", "ceh", "director", "developer"};
     private static String currentProfile = "";
-    private static final String URL = "jdbc:postgresql://localhost:5432/kiyv3?useSSL=false";
-//    private static final String URL = "jdbc:postgresql://192.168.0.11:5432/kiyv3?useSSL=false";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "root8254";
+    private static String url;
+    private static String driverPostgres;
+    private static String user;
+    private static String password;
 
-    private static String fileName = "\\\\SERVER-KIY-V\\ptc\\KiyVtime.txt";
-    private static String fileName1C = "\\\\SERVER-KIY-V\\ptc\\KiyVtime1C.txt";
-    private static String fileUserName = "\\\\SERVER-KIY-V\\ptc\\KiyVuser.txt";
+    private static String fileName;
+    private static String fileName1C;
+    private static String fileUserName;
 
-//    private static final String serverPath = "F:\\1C Base\\Copy250106";
-//    private static final String dbfPath = "F:\\KiyV management\\DB_copy";
+    static {
+        try (InputStream in = DataControl.class.getClassLoader().getResourceAsStream("persistence.properties")){
+            Properties properties = new Properties();
+            properties.load(in);
 
+            fileName = properties.getProperty("fileName");
+            fileName1C = properties.getProperty("fileName1C");
+            fileUserName = properties.getProperty("fileUserName");
+            driverPostgres = properties.getProperty("database.driverClassName");
+            url = properties.getProperty("database.url");
+            user = properties.getProperty("database.username");
+            password = properties.getProperty("database.password");
 
-
-    public static String getURL() {
-        return URL;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    public static String getUser() {
-        return USER;
-    }
-
-    public static String getPASSWORD() {
-        return PASSWORD;
-    }
-
-
 
 
     // APPEND new time
@@ -58,22 +57,25 @@ public final class DataControl {
         return true;
     }
 
-    /*// APPEND new time
-    public static boolean writeTimeChange(){
+    public static String getUrl() {
+        return url;
+    }
 
-        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
-                new FileOutputStream(new File(fileName), true), "UTF8"))) {
-            String s = String.valueOf(DateConverter.getNowDate());
-            bw.write( s + "\r\n");
-            bw.flush();
-        }
-        catch(IOException ex){
-            System.out.println(ex.getMessage());
-            return false;
-        }
-        return true;
+    public static String getDriverPostgres() {
+        return driverPostgres;
+    }
 
-    }*/
+    public static String getPassword() {
+        return password;
+    }
+
+    public static String getFileName1C() {
+        return fileName1C;
+    }
+
+    public static String getUser() {
+        return user;
+    }
 
     public static String getFileName() {
         return fileName;

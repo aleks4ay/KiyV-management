@@ -2,16 +2,10 @@ package model.description;
 
 public class DescriptionOrder implements Comparable<DescriptionOrder> {
 
-//    private ToggleGroup parsingCheckGroup;
-//    private RadioButton buttonFactory;
-//    private RadioButton buttonKB;
-
-//    private CheckBox[] checkBoxesStatus = new CheckBox[25];
     private long[] statusTimeList = new long[25];
     private Status status = null;
 
     private String kod;
-//    private int bigNumber = 0;
     private int position = 0;
     private int amount = 0;
     private String descrFirst = "";
@@ -30,7 +24,6 @@ public class DescriptionOrder implements Comparable<DescriptionOrder> {
             statusTimeList[i] = 0;
         }
         this.kod = kod;
-//        this.bigNumber = bigNumber;
         this.position = position;
         this.amount = amount;
         this.descrFirst = descrFirst;
@@ -180,8 +173,6 @@ public class DescriptionOrder implements Comparable<DescriptionOrder> {
         DescriptionOrder other = (DescriptionOrder) obj;
         if (kod != other.kod)
             return false;
-        /*if (bigNumber != other.bigNumber)
-            return false;*/
         return true;
     }
 

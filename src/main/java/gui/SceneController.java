@@ -19,12 +19,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import model.description.DescriptionFactory;
-import model.description.DescriptionOrder;
-import model.description.DescriptionParsing;
-import model.order.Order;
-import model.order.OrderFactory;
-import model.order.OrderParsing;
+import model.description.*;
+import model.order.*;
 import time.DateConverter;
 import artifact_new_manufplan.controller.ReportController;
 
@@ -38,7 +34,6 @@ public class SceneController implements Initializable {
 
     private LongProperty isNewOrderTime = new SimpleLongProperty(new File(DataControl.getFileName()).lastModified());
 
-//    private boolean thisAppChangeData = false;
     private static File file1 = new File(DataControl.getFileName());
     public String profile = DataControl.getCurrentProfile();
 
@@ -52,7 +47,6 @@ public class SceneController implements Initializable {
     public static String dateWay = "За последние 30 дней";
 
     public static String sortWayFactory = "По номеру заказа";
-//    public static String observeOrderFactory = "Все открытые заказы";
     public static String observeOrderFactory = "Заказы в цехе";
     public static String typeViewFactory = "ЦЕХ, КБ, новый"; //"ВСЕ (ЦЕХ, КБ, НОВЫЙ)";
 
@@ -79,7 +73,6 @@ public class SceneController implements Initializable {
     private ObservableList<TableRow> listTableRow = FXCollections.observableArrayList();
     private ObservableList<TableRowFactory> listTableRowForFactory = FXCollections.observableArrayList();
     private ObservableList<TableRowKB> listTableRowForKB = FXCollections.observableArrayList();
-//    private ObservableList<TableRowSearch> listTableRowForSearch = FXCollections.observableArrayList();
 
     private ObservableList<OrderParsing> listOrderParsing = FXCollections.observableArrayList();
     private ObservableList<DescriptionParsing> listDescriptionParsing = FXCollections.observableArrayList();
@@ -116,7 +109,6 @@ public class SceneController implements Initializable {
     @FXML private Label info9;
     @FXML private Label info10;
     @FXML private Label info11;
-//    @FXML private Label info_new_data; //messege
 
     @FXML private Label info_factory_1;
     @FXML private Label info_factory_2;
@@ -128,22 +120,12 @@ public class SceneController implements Initializable {
     @FXML private Label info_kb_3;
     @FXML private TextField search_tablo_factory;
 
-//    @FXML private MenuButton menu1;
-//    @FXML private MenuButton menu2;
-//    @FXML private MenuButton menu3;
-//    @FXML private MenuButton menu4;
-//    @FXML private MenuButton menu5;
-//    @FXML private MenuButton menu6;
-
 //---------------------- B U T T O N
     @FXML private Button parsing_save;
     @FXML private Button kb_save;
     @FXML private Button faktory_save;
     @FXML private Button faktory_change;
-//    @FXML private Button kb_change;
     @FXML private Button faktory_cansel;
-//    @FXML private Button btn_new_data; //message
-//    @FXML private Button shipment_save;
 
 //----------------T A B    P A R S I N G  ---------------------------------
     @FXML private Label info_parsing;

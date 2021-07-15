@@ -42,8 +42,6 @@ public class DescriptionParsing {
         buttonTeh.setToggleGroup(parsingCheckGroup);
         buttonOther.setToggleGroup(parsingCheckGroup);
 
-//        buttonTeh.setDisable(true);
-
 
         if (type.equalsIgnoreCase("Техн.") & isParsing == 0) {
             buttonTeh.setSelected(true);
@@ -63,27 +61,6 @@ public class DescriptionParsing {
             buttonOther.setDisable(true);
             buttonTeh.setDisable(true);
         }
-
-/*        if ( ! type.equalsIgnoreCase("новый") & type.equalsIgnoreCase("Техн.")) {
-            buttonTeh.setSelected(true);
-        }
-        else if ( ! type.equalsIgnoreCase("новый")) {
-            if (type.equalsIgnoreCase("ЦЕХ")) {
-                buttonFactory.setSelected(true);
-            }
-            else if (type.equalsIgnoreCase("КБ")) {
-                buttonKB.setSelected(true);
-            }
-            else if (type.equalsIgnoreCase("Прочее")) {
-                buttonOther.setSelected(true);
-            }
-
-            buttonFactory.setDisable(true);
-            buttonKB.setDisable(true);
-            buttonOther.setDisable(true);
-            buttonTeh.setDisable(true);
-        }*/
-
     }
 
     public String getId() {
